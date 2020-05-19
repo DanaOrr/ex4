@@ -1,0 +1,108 @@
+<!Doctype html>
+<html lang="en">
+ 
+<head>
+    <link  href="css/style.css" rel="stylesheet" >
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://w3schools-fa.ir/howto/howto_js_password_validation.html" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title> Registration for the Chocolate Kingdom </title>
+</head>
+ 
+<body>
+    <h1> Sign up for a trip to the Chocolate Kingdom</h1>
+    <main>
+        
+        <div> <!-- class="container" -->
+            <div> <!--  class="row" -->
+                <form action="http://html5-book.co.il/teach/forms/get_form2.php" method="GET">
+        
+                    <label>1. FullName &nbsp;
+                        <input type="text" placeholder="Enter Your Full Name" name="fullName" title="You need ' ' between" required>
+                    </label>
+                    <br>
+                 
+                    <label for="psw">2.Password</label>
+                      <input type="password" placeholder="Choose your password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                    
+                      <br>
+                    <label>3. Email
+                        <input type="email" placeholder="Enter your Email" name="mail"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete>
+                    </label>
+                
+                    <br>
+                    <label>4. Website
+                        <input type="url" placeholder="Enter Your Website" name="Website" pattern="https?://.+" title="Include http://" >
+                    </label>
+                    <br>
+                    <label>5. Phone
+                        <input type="tel" placeholder="Enter Your phone number" pattern=".{10,}" name="phone">
+                    </label>
+                    <br>
+                    <label>6. Coffee
+                        <input type="number" placeholder="Enter how many Chocolate you eat in one day" name="coffee">
+                    </label>
+                    <br>
+                    <label>7. Range
+                        <input type="range" min="0" max="50" name="temper">
+                    </label>
+                    <br>
+                    <label>8. Address
+                        <textarea rows="5" cols="20" name="address">some text</textarea>
+                    </label>
+                    <fieldset>
+                        <legend>10. Which chocolate do you prefer?  </legend>
+                        <label>NUTELLA
+                            <input type="checkbox" name="interests[]" value="GYM">
+                        </label>
+                        <label> OREO
+                            <input type="checkbox" name="interests[]" value="Play RedAlert">
+                        </label>
+                        <label> KINDER BUENO
+                            <input type="checkbox" name="interests[]" value="Coding-tutorials">
+                        </label>
+                    </fieldset>
+                    <br>
+                    <label>11. Gender
+                        <input type="radio" name="gender" value="male" checked> Male
+                        <input type="radio" name="gender" value="female"> Female
+                        <input type="radio" name="gender" value="other"> Other
+                    </label>
+                    <br>
+                    <label>12. Age
+                        <select name="age">
+                            <option selected="selected">Choose...</option>
+                            <option value="0-12">0-12</option>
+                            <option value="12-18">12-18</option>
+                            <option value="19-22">19-22</option>
+                            <option value="23-30">23-30</option>
+                            <option value="31-40">31-40</option>
+                            <option value="40+">40+</option>
+                            
+                        </select>
+                    </label>
+                    <br>
+                    <label>color:
+                        <input  id="changeColor" type="color">
+                    </label>
+                    <br>
+                    <label><input type="image" src="image/pank.jpg" formtatget="_blank" style="width: 150px; height: 150px;" ></label>
+                    
+                </form>
+                <div id="message">
+                    <h3>Password must contain the following:</h3>
+                    <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                    <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                    <p id="number" class="invalid">A <b>number</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                  </div>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+
+</body>
+ 
+</html>
